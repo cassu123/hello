@@ -22,6 +22,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.CloudOff
+import androidx.compose.material.icons.outlined.Code
 import androidx.compose.material.icons.outlined.Dns
 import androidx.compose.material.icons.outlined.FileOpen
 import androidx.compose.material.icons.outlined.Forum
@@ -108,6 +109,15 @@ fun SettingsScreen(
     var showPrivacyPolicy by remember { mutableStateOf(false) }
     var showLicenses by remember { mutableStateOf(false) }
     val uriHandler = LocalUriHandler.current
+    val openLink: (String) -> Unit = { url ->
+        try {
+            uriHandler.openUri(url)
+        } catch (_: ActivityNotFoundException) {
+            // Ignore if the device has no browser installed.
+        } catch (_: IllegalArgumentException) {
+            // Ignore if no handler can resolve the URI.
+        }
+    }
 
     val filePicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         if (uri != null) viewModel.importBook(uri)
@@ -303,15 +313,14 @@ fun SettingsScreen(
                     title = stringResource(R.string.community),
                     supporting = stringResource(R.string.join_discord),
                     leading = Icons.Outlined.Forum,
-                    onClick = {
-                        try {
-                            uriHandler.openUri(CommunityLinks.DISCORD_URL)
-                        } catch (_: ActivityNotFoundException) {
-                            // Ignore if the device has no browser installed.
-                        } catch (_: IllegalArgumentException) {
-                            // Ignore if no handler can resolve the URI.
-                        }
-                    },
+                    onClick = { openLink(CommunityLinks.DISCORD_URL) },
+                )
+                SettingsDivider()
+                SettingsRow(
+                    title = stringResource(R.string.source_code),
+                    supporting = stringResource(R.string.source_code_hint),
+                    leading = Icons.Outlined.Code,
+                    onClick = { openLink(CommunityLinks.GITHUB_URL) },
                 )
                 SettingsDivider()
                 SettingsRow(

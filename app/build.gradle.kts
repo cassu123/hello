@@ -16,8 +16,8 @@ android {
         applicationId = "org.hello.reader"
         minSdk = 26
         targetSdk = 36
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -67,6 +67,11 @@ kotlin {
 
 ksp {
     arg("room.schemaLocation", "$projectDir/schemas")
+}
+
+// Name the APKs after the app and its version, e.g. hello-1.0.1-release.apk.
+base {
+    archivesName = "hello-${android.defaultConfig.versionName}"
 }
 
 dependencies {

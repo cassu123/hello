@@ -26,10 +26,13 @@ Hello Reader is an Android reader and player for [Storyteller](https://storytell
 
 ## Building and Testing
 
-Run Gradle tasks from the repository root with JDK 17:
+Clone the repository and run Gradle tasks from its root with JDK 17:
 
 ```bash
-# Build the debug APK (output at app/build/outputs/apk/debug/app-debug.apk)
+git clone https://github.com/cassu123/hello.git
+cd hello
+
+# Build the debug APK (output at app/build/outputs/apk/debug/hello-<version>-debug.apk)
 ./gradlew assembleDebug
 
 # Run JVM unit tests
@@ -80,4 +83,5 @@ Bundled fonts (Literata, Atkinson Hyperlegible, Inter, Baloo 2 and OpenDyslexic)
 ## Community & Privacy
 
 - **Discord**: [https://discord.gg/MVCdrfwFpE](https://discord.gg/MVCdrfwFpE)
+- **Source code & issues**: [https://github.com/cassu123/hello](https://github.com/cassu123/hello)
 - **Privacy Policy**: See [PRIVACY.md](PRIVACY.md) for full details on data handling and permissions.

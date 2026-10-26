@@ -39,4 +39,5 @@ All local data remains under your physical control on your device:
 ## Contact
 For questions or requests regarding this privacy notice:  
 **Email:** [christianhokeprogramming@gmail.com](mailto:christianhokeprogramming@gmail.com)  
-**Community (Discord):** [https://discord.gg/MVCdrfwFpE](https://discord.gg/MVCdrfwFpE)
+**Community (Discord):** [https://discord.gg/MVCdrfwFpE](https://discord.gg/MVCdrfwFpE)  
+**Source code & issues (GitHub):** [https://github.com/cassu123/hello](https://github.com/cassu123/hello)

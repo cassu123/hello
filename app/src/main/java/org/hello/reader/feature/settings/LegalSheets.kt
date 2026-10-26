@@ -41,6 +41,7 @@ import org.hello.reader.ui.theme.Spacing
 
 object CommunityLinks {
     const val DISCORD_URL = "https://discord.gg/MVCdrfwFpE"
+    const val GITHUB_URL = "https://github.com/cassu123/hello"
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -162,7 +163,7 @@ fun PrivacyPolicySheet(onDismiss: () -> Unit) {
 
             LegalSection(
                 title = stringResource(R.string.privacy_sec6_title),
-                content = stringResource(R.string.privacy_sec6_body, CommunityLinks.DISCORD_URL),
+                content = stringResource(R.string.privacy_sec6_body, CommunityLinks.DISCORD_URL, CommunityLinks.GITHUB_URL),
             )
 
             Spacer(Modifier.height(Spacing.L))

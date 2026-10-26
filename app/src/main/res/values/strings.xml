@@ -307,6 +307,8 @@
     <string name="version_name">Version %1$s</string>
     <string name="community">Community</string>
     <string name="join_discord">Join the Hello Discord</string>
+    <string name="source_code">Source code</string>
+    <string name="source_code_hint">View Hello on GitHub and report issues</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="privacy_policy_hint">Zero data collection, no telemetry, direct-to-server</string>
     <string name="open_source_licenses">Open Source Licenses</string>
@@ -528,7 +530,7 @@
     <string name="privacy_sec5_title">5. Data Retention &amp; Deletion</string>
     <string name="privacy_sec5_body">All local data remains under your physical control on your device. You can delete downloaded books, remove bookmarks, or disconnect server profiles at any time. Selecting \'Clear Storage\' in Android Settings or uninstalling the app permanently purges all local databases, caches, and credentials.</string>
     <string name="privacy_sec6_title">6. Publisher &amp; Contact</string>
-    <string name="privacy_sec6_body">For privacy questions or requests:\nchristianhokeprogramming@gmail.com\n\nCommunity (Discord):\n%1$s</string>
+    <string name="privacy_sec6_body">For privacy questions or requests:\nchristianhokeprogramming@gmail.com\n\nCommunity (Discord):\n%1$s\n\nSource code and issues (GitHub):\n%2$s</string>
     <string name="licenses_subtitle">Third-Party Notices &amp; Font Licenses</string>
     <string name="licenses_warranty_title">Disclaimer of Warranty &amp; Limitation of Liability</string>
     <string name="licenses_warranty_body">THE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
