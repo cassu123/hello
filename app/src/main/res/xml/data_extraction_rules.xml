@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The secure vault (which also stores its own Tink keyset) is encrypted with a non-exportable Android Keystore key.
+  Restoring it on another device would leave undecryptable data behind, so it
+  is excluded from both cloud backup and device-to-device transfer.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="hello_secure_vault.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="hello_secure_vault.xml" />
+    </device-transfer>
+</data-extraction-rules>

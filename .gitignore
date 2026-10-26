@@ -1,0 +1,36 @@
+# Gradle & Kotlin build outputs
+.gradle/
+.kotlin/
+build/
+/build/
+/app/build/
+
+# Local SDK & environment configuration
+/local.properties
+
+# Android Studio & IDE files
+*.iml
+.idea/
+.vscode/
+.navigation/
+.externalNativeBuild/
+.cxx/
+/captures/
+*.hprof
+output-metadata.json
+
+# Built packages & signing keys
+*.apk
+*.aab
+*.jks
+*.keystore
+keystore.properties
+/hello-reader-debug.apk
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+*~
+
+# Logs
+*.log

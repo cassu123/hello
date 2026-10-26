@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Listening book: an open book with a face, wearing headphones. Scaled to sit inside the 66dp safe zone. -->
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.86"
+        android:scaleY="0.86">
+        <!-- Pages -->
+        <path
+            android:fillColor="#F5E9D3"
+            android:strokeColor="#F5E9D3"
+            android:strokeWidth="4"
+            android:strokeLineJoin="round"
+            android:pathData="M30,44 C38,40 47,40 53,45 L53,76 C47,72 38,72 30,75 Z" />
+        <path
+            android:fillColor="#E8D8BA"
+            android:strokeColor="#E8D8BA"
+            android:strokeWidth="4"
+            android:strokeLineJoin="round"
+            android:pathData="M55,45 C61,40 70,40 78,44 L78,75 C70,72 61,72 55,76 Z" />
+        <!-- Headphones -->
+        <path
+            android:strokeColor="#F08A6C"
+            android:strokeWidth="4.5"
+            android:strokeLineCap="round"
+            android:pathData="M27,56 C27,30 81,30 81,56" />
+        <path
+            android:fillColor="#F08A6C"
+            android:pathData="M26,52 L26,52 A5,5 0 0,1 31,57 L31,64 A5,5 0 0,1 26,69 L26,69 A5,5 0 0,1 21,64 L21,57 A5,5 0 0,1 26,52 Z" />
+        <path
+            android:fillColor="#F08A6C"
+            android:pathData="M82,52 L82,52 A5,5 0 0,1 87,57 L87,64 A5,5 0 0,1 82,69 L82,69 A5,5 0 0,1 77,64 L77,57 A5,5 0 0,1 82,52 Z" />
+        <!-- Face -->
+        <path
+            android:fillColor="#1F2A44"
+            android:pathData="M41,55 A2,2 0 1,1 41,59 A2,2 0 1,1 41,55 Z" />
+        <path
+            android:fillColor="#1F2A44"
+            android:pathData="M67,55 A2,2 0 1,1 67,59 A2,2 0 1,1 67,55 Z" />
+        <path
+            android:strokeColor="#1F2A44"
+            android:strokeWidth="2.4"
+            android:strokeLineCap="round"
+            android:pathData="M50,64 Q54,68 58,64" />
+    </group>
+</vector>
