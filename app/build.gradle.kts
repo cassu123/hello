@@ -13,7 +13,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "org.hello.reader"
+        applicationId = "song.hello.reader"
         minSdk = 26
         targetSdk = 36
         versionCode = 2

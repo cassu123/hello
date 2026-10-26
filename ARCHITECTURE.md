@@ -1,6 +1,6 @@
 # ARCHITECTURE: "Hello" — Native Android Client for Storyteller
 
-> **Target Package:** `org.hello.reader`  
+> **Application ID:** `song.hello.reader` (Kotlin package `org.hello.reader`)  
 > **Min SDK:** 26 (Android 8.0) | **Target SDK:** 36 (Android 16)  
 
 ---
@@ -244,7 +244,7 @@ A book opens in `ReadaloudSynced` only when its readaloud asset is downloaded on
   - Leaving the reader while audio is loaded hands the session to `PlaybackSession` (`detach`), keeping the persistent `MiniPlayer` bar visible above the navigation bar on Home, Library, Series, Collections, Book Detail, and Notebook screens.
   - Tapping the `MiniPlayer` card (or the expand button on the reader's docked mini-player) opens `FullAudioPlayerSheet` with chapter scrubbing, transport controls, speed & sleep timer sheets, and chapter selection; tapping the book title in `FullAudioPlayerSheet` navigates into the reader.
 - **`AudioPlaybackController` & `NarrationPlayerService`**: Wraps Media3 `ExoPlayer` inside a foreground `MediaLibraryService`. Track items carry structured media IDs (`track_${bookId}_${index}`) so playback transitions from Android Auto or system media controls are reconciled by `PlaybackSession`. On service teardown (`onDestroy`), playback state is snapshotted before releasing `ExoPlayer` and persisted on the application scope.
-- **`MediaLibraryTreeBuilder`**: Exposes a browsable Android Auto hierarchy (`Continue Listening`, `Audiobooks`, `Readalouds`) backed by downloaded books and local checkpoints, resolving local cover art through a `ContentProvider` (`content://org.hello.reader.covers/...`).
+- **`MediaLibraryTreeBuilder`**: Exposes a browsable Android Auto hierarchy (`Continue Listening`, `Audiobooks`, `Readalouds`) backed by downloaded books and local checkpoints, resolving local cover art through a `ContentProvider` (`content://song.hello.reader.fileprovider/...`).
 - **`SmartRewindPolicy` & `SleepTimerManager`**: Applies pause-duration-based smart rewind (`0s` under 5s, `2s` under 1m, `10s` under 30m, `30s` over 30m) and a sleep timer with a linear volume fade-out.
 - **`ContinueReadingWidget` & `ContinueReadingWidgetUpdater`**: Jetpack Glance app widget observing the active profile's most recently opened downloaded book (excluding books marked *To read*) and checkpoint to display cover art, title, progress, and a one-tap resume action on the home screen.
 
@@ -255,7 +255,7 @@ A book opens in `ReadaloudSynced` only when its readaloud asset is downloaded on
 All databases, credentials, and downloaded or imported book files reside inside the application's internal sandbox:
 
 ```
-/data/user/0/org.hello.reader/
+/data/user/0/song.hello.reader/
 ├── databases/
 │   └── hello_local.db                  # Room DB scoped by (server_id, user_id)
 ├── datastore/

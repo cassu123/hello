@@ -1,7 +1,7 @@
 # Privacy Notice for Hello Reader
 
 **Effective Date:** October 23, 2026  
-**Application:** Hello Reader (`org.hello.reader`)  
+**Application:** Hello Reader (`song.hello.reader`)  
 
 Hello Reader is designed with privacy in mind. This document outlines how data is handled by the application, including network communications, on-device storage, permissions, and third-party services.
 

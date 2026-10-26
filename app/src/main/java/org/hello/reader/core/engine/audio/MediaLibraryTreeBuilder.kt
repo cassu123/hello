@@ -10,6 +10,7 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.util.UnstableApi
 import java.io.File
+import org.hello.reader.BuildConfig
 import org.hello.reader.R
 import org.hello.reader.core.model.Book
 import org.hello.reader.core.model.BookMediaType
@@ -33,7 +34,7 @@ object MediaLibraryTreeBuilder {
     const val CATEGORY_DOWNLOADED = "downloaded"
     const val CATEGORY_RECENT = "recent"
     const val MEDIA_ID_BOOK_PREFIX = "book:"
-    const val FILE_PROVIDER_AUTHORITY = "org.hello.reader.fileprovider"
+    const val FILE_PROVIDER_AUTHORITY = "${BuildConfig.APPLICATION_ID}.fileprovider"
     const val MAX_RECENT_ITEMS = 25
 
     private val COVER_EXTENSIONS = listOf("jpg", "png", "webp", "jpeg")
